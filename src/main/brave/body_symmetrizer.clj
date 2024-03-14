@@ -1,6 +1,7 @@
 (ns brave.body-symmetrizer
   (:require
     [clojure.string :as string]))
+
 (defn n->pattern [n]
   (str n "-"))
 

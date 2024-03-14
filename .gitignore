@@ -1,2 +1,6 @@
 .nrepl-port
 .cpcache
+projectFilesBackup
+*.iml
+.idea
+.nrepl-port

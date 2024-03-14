@@ -11,7 +11,7 @@
 ## My Solution
 
 Computing the nth Fibonacci number is a common problem posed in most programming courses.
-It helps illustrating recursion, and it has am easy, yet naive, implementation. But this
+It helps to illustrate recursion, and it has been easy, yet naive, implementation. But this
 implementation is not enough! Since Fibonacci numbers grow exponentially fast in size, the
 naive algorithm slows down dramatically (and may cause stack overflow) for computing just 
 the 100th Fibonacci number.
@@ -39,7 +39,7 @@ computing Fibonacci numbers was something like this
 
 This wasn't too bad, and after filtering the even numbers below four million, I obtained Project
 Euler's approval. However, I came across a 
-[really interesting solution in StackOverflow](https://stackoverflow.com/questions/8939970/a-recursive-fibonacci-function-in-clojure)
+[fascinating solution in StackOverflow](https://stackoverflow.com/questions/8939970/a-recursive-fibonacci-function-in-clojure)
 This solution is awesome since it uses the `iter` function, which returns a lazy sequence that results
 from successive application of a function to an initial input. The Fibonacci recursion is easily
 reduced to the following function

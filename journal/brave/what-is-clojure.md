@@ -26,3 +26,9 @@ its main features is an _integrated REPL_.
 > IMPORTANT: As a Clojure developer, it is fundamental to get a good grip on the REPL, since that
 > allows you to prototype, debug, execute tests, and evaluate expressions in your code, among other
 > useful things!
+
+## Clojure Philosophy
+
+Clojure is driven by two main concepts: _simplicy_ and _power_. Simplicity means that a component of a
+software system only carries out a task and isn't concerned with anything else. A component has power, if
+it has enough capabilities for completing the task it was designed for.

@@ -5,4 +5,4 @@
 
 (deftest sum-multiples-3-or-5-below-test
   (testing "sum-multiples-3-or-5-below"
-    (is (= 23 (e.multiples-sum/sum-multiples-3-or-5-below 10)) "Project Euler Sample")))
+    (is (= 23 (e.multiples-sum/sum-multiples-3-or-5-below 10)))))
