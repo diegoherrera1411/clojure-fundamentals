@@ -27,3 +27,26 @@
   (->> (iterate #(* divisor %) divisor)
        (take-while #(divisible-by? % dividend))
        count))
+
+(defn multiples-outside-range? [n sorted-int-list]
+  (let [last-int (or (last sorted-int-list) 0)]
+    (< last-int (* 2 n))))
+
+(defn distinct-and-divisible-by? [n num]
+  (and (divisible-by? n num) (not= n num)))
+
+(defn sieve
+  [start-prime number-range]
+  (let [first-new-prime (some #(when (< start-prime %) %) number-range)]
+    (if (multiples-outside-range? start-prime number-range)
+      number-range
+      (recur first-new-prime (remove (partial distinct-and-divisible-by? start-prime) number-range)))))
+
+(defn prime-numbers-until
+  [number]
+  (->> (inc number)
+       (range 3)
+       (sieve 2)
+       (cons 2)))
+
+(def memo-primes-until (memoize prime-numbers-until))
