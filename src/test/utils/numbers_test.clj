@@ -41,3 +41,11 @@
       true 4 1234
       false 3 1234
       false 4 123)))
+
+(deftest multiplicity-test
+  (testing "when dividend contains exactly n times the divisor"
+    (is (= 2 (u.numbers/multiplicity (* 17 17) 17))))
+  (testing "when dividend contains divisor and is large"
+    (is (= 2 (u.numbers/multiplicity (* 17 17 11 2) 17))))
+  (testing "when dividend doesn't contain divisor"
+    (is (= 0 (u.numbers/multiplicity (* 11 19 13) 17)))))

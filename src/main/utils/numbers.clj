@@ -23,5 +23,7 @@
     (apply / args)
     nil))
 
-(safe-divide 1 2 nil)
-(has-n-digits? 3 nil)
+(defn multiplicity [dividend divisor]
+  (->> (iterate #(* divisor %) divisor)
+       (take-while #(divisible-by? % dividend))
+       count))
